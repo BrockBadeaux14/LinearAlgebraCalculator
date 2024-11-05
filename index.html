@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Multiplication</title>
+    <style>
+        .matrix-container {
+            display: flex; /* Enables flexible layout */
+            justify-content: space-around; /* Distributes space around items */
+        }
+        table {
+            border-collapse: collapse; /* Collapses table borders */
+            margin: 20px; 
+        }
+        td, input {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="matrix-container"> 
+        <div id="matrixA">
+            <table id="matrixTable">
+                <tr>
+                    <td><input id="aCell1_1" type="text" placeholder="1_1"></td>
+                    <td><input id="aCell1_2" type="text" placeholder="1_2"></td>
+                    <td><input id="aCell1_3" type="text" placeholder="1_3"></td> 
+                </tr>
+                <tr>
+                    <td><input id="aCell2_1" type="text" placeholder="2_1"></td>
+                    <td><input id="aCell2_2" type="text" placeholder="2_2"></td>
+                    <td><input id="aCell2_3" type="text" placeholder="2_3"></td>
+                </tr>
+                <tr>
+                    <td><input id="aCell3_1" type="text" placeholder="3_1"></td>
+                    <td><input id="aCell3_2" type="text" placeholder="3_2"></td>
+                    <td><input id="aCell3_3" type="text" placeholder="3_3"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="matrixB">
+            <table id="matrixTableB">
+                <tr>
+                    <td><input id="bCell1_1" type="text" placeholder="1_1"></td>
+                    <td><input id="bCell1_2" type="text" placeholder="1_2"></td>
+                    <td><input id="bCell1_3" type="text" placeholder="1_3"></td>
+                </tr>
+                <tr>
+                    <td><input id="bCell2_1" type="text" placeholder="2_1"></td>
+                    <td><input id="bCell2_2" type="text" placeholder="2_2"></td>
+                    <td><input id="bCell2_3" type="text" placeholder="2_3"></td>
+                </tr>
+                <tr>
+                    <td><input id="bCell3_1" type="text" placeholder="3_1"></td>
+                    <td><input id="bCell3_2" type="text" placeholder="3_2"></td>
+                    <td><input id="bCell3_3" type="text" placeholder="3_3"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="result">Result:
+        <table id="resultTable">
+            <tr>
+                <td id="resultCell1_1"></td>
+                <td id="resultCell1_2"></td>
+                <td id="resultCell1_3"></td>
+            </tr>
+            <tr>
+                <td id="resultCell2_1"></td>
+                <td id="resultCell2_2"></td>
+                <td id="resultCell2_3"></td>
+            </tr>
+            <tr>
+                <td id="resultCell3_1"></td>
+                <td id="resultCell3_2"></td>
+                <td id="resultCell3_3"></td>
+            </tr>
+        </table>
+    </div>
+
+    <button onclick="getMatrixes()">Multiply</button>
+    <script src="script.js"></script> 
+</body>
+</html>
